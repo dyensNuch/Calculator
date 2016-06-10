@@ -6,6 +6,7 @@ package com.example.nuch_nb.calculator_unittest;
 public class orangefile {
     public String getSomething()
     {
-        return "someting";
+        return "something"; //อ้าว เชขียนผิด
+        //ขอเทียบ code เก่าซิ
     }
 }

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.nuch_nb.calculator_unittest.MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:ems="10"
+        android:id="@+id/edtNumber1"
+        android:text="0"
+        android:singleLine="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:selectAllOnFocus="true"
+        android:textAlignment="textEnd" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:ems="10"
+        android:id="@+id/edtNumber2"
+        android:text="0"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/rbgSign"
+        android:layout_alignStart="@+id/rbgSign"
+        android:singleLine="false"
+        android:selectAllOnFocus="true"
+        android:nestedScrollingEnabled="false"
+        android:textAlignment="viewEnd" />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbgSign"
+        android:orientation="vertical"
+        android:longClickable="false"
+        android:baselineAligned="false"
+        android:layout_below="@+id/edtNumber1"
+        android:layout_alignStart="@+id/edtNumber1"
+        android:layout_marginTop="41dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="     +"
+            android:id="@+id/rbPlus"
+            android:layout_below="@+id/edtNumber1"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="     -"
+            android:id="@+id/rbMinus"
+            android:checked="false"
+            android:layout_below="@+id/edtNumber1"
+            android:layout_alignStart="@+id/edtNumber1" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="     *"
+            android:id="@+id/rbMulti"
+            android:checked="false"
+            android:layout_below="@+id/edtNumber1"
+            android:layout_centerHorizontal="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="     /"
+            android:id="@+id/rbDevide"
+            android:checked="false"
+            android:layout_below="@+id/edtNumber1"
+            android:layout_alignEnd="@+id/edtNumber1" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/btCal"
+        android:nestedScrollingEnabled="true"
+        android:onClick="myClick"
+        android:layout_below="@+id/edtRes"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:enabled="false"
+        android:textColor="#FF0000"
+        android:ems="10"
+        android:id="@+id/edtRes"
+        android:layout_marginTop="52dp"
+        android:layout_below="@+id/edtNumber2"
+        android:layout_alignStart="@+id/edtNumber2"
+        android:textAlignment="textEnd"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:singleLine="false"
+        android:digits="2"
+        android:contextClickable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        android:id="@+id/txtView1"
+        android:layout_alignBaseline="@+id/edtRes"
+        android:layout_alignParentStart="true"
+        android:textColor="#FF0000"
+        android:textSize="20dp" />
+
+</RelativeLayout>

@@ -64,4 +64,11 @@ public class MainActivity extends AppCompatActivity {
         rbMulti = (RadioButton) this.findViewById(R.id.rbMulti);
         rbDevide = (RadioButton) this.findViewById(R.id.rbDevide);
     }
+    public void showHelloWorld() {
+            number1 = (EditText)this.findViewById(R.id.edtNumber1);
+
+        number1.setText("hello world");
+        //อ้าว ผ่านบังคับใน xml ทำไมผ่าน เพรานั่นมันเป็นการ บังคับ keyboard ครับ
+        //เอาล่ะ ลอง push
+    }
 }

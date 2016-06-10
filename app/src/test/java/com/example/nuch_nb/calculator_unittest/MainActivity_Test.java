@@ -241,8 +241,22 @@ public void  shouldGetfourIffiveminusone(){
         calculateButton.performClick();
 
         TextView resultview = (TextView) mainActivity.findViewById(R.id.edtRes);
-        assertEquals("3.33",resultview.getText().toString());
-        double i = 0.3;
+    assertEquals("3.33",resultview.getText().toString());
+    double i = 0.3;
+
+}
+
+    @Test
+    public void shouldShowHelloOnNumber1() {
+
+        createActivity();
+        mainActivity.showHelloWorld();
+        EditText number1 = (EditText)mainActivity.findViewById(R.id.edtNumber1);
+
+        assertEquals("hello world",number1.getText().toString());
+
+
+
 
     }
 }
